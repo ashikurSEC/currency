@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.glass-card {
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari Support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #161722;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Custom Arrow for Dropdown */
+.input-group::before {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(20, 180, 55, 0.7);
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: background 0.5s ease border 0.5s ease;
+}
+
+
+
+/* Focus and Hover Effect */
+input:focus, select:focus,
+input:hover, select:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transition: background 0.5s ease border 0.5s ease;  
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(180, 12, 12);
+}
+
+@media screen and (max-width: 768px) {
+    .glass-card {
+        padding: 15px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #result {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .glass-card {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #result {
+        font-size: 14px;
+    }
+}
