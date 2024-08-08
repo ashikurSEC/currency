@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <h2>Currency Converter</h2>
+            <div class="input-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+            </div>
+            <div class="input-group">
+                <label for="currency">Convert from:</label>
+                <select id="currency">
+                    <option value="ARS">Argentina - ARS</option>
+                    <option value="AUD">Australia - AUD</option>
+                    <!-- আরও অপশন যোগ করতে পারেন -->
+                    <option value="USD">United States - USD</option>
+                    <!-- আরও অপশন যোগ করতে পারেন -->
+                </select>
+            </div>
+            <button onclick="convertCurrency()">Convert to BDT</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
